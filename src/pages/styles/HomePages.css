@@ -1,0 +1,131 @@
+.img__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  
+  .img__home{
+    width: 100%;
+    max-width: 200px;
+    border-radius: 1.2rem;
+    border-width: 3px;
+    border-color: rgb(155, 23, 155);
+    border-style: dashed solid;
+    box-shadow: 0.4rem 0.4rem 1.3rem rgb(155, 23, 155);
+    opacity: 85%;
+  }
+}
+
+.form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  .form__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+
+    .form__span {
+      color: rgb(219, 108, 219);
+      font-size: 1.2rem;
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+
+    .form__input {
+      border: 2px solid rgb(155, 23, 155);
+      background-color: rgb(212, 171, 212);
+      font-size: 1rem;
+      color: rgb(155, 23, 155);
+      padding: 0.2rem 0.5rem;
+    }
+  }
+  
+  .form__btn {
+    color: rgb(155, 23, 155);
+    border: 2px solid rgb(155, 23, 155);
+    background-color: rgb(212, 171, 212);
+    font-size: 1rem;
+    padding: 0.2rem;
+    font-weight: bold;
+    width: 80px;
+    height: 30px;
+
+    &:hover {
+      color: rgb(212, 171, 212);
+      background-color: rgb(199, 32, 199);
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .img__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+    .img__home{
+      width: 100%;
+      max-width: 200px;
+      border-radius: 1.2rem;
+      border-width: 3px;
+      border-color: rgb(155, 23, 155);
+      border-style: dashed solid;
+      box-shadow: 0.4rem 0.4rem 1.3rem rgb(155, 23, 155);
+      opacity: 85%;
+    }
+  }
+  
+  .form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.7rem;
+  
+    .form__label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+  
+      .form__span {
+        color: rgb(219, 108, 219);
+        font-size: 1.5rem;
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+  
+      .form__input {
+        border: 2px solid rgb(155, 23, 155);
+        background-color: rgb(212, 171, 212);
+        font-size: 1.2rem;
+        color: rgb(155, 23, 155);
+        padding: 0.2rem 0.5rem;
+      }
+    }
+    
+    .form__btn {
+      color: rgb(155, 23, 155);
+      border: 2px solid rgb(155, 23, 155);
+      background-color: rgb(212, 171, 212);
+      font-size: 1.2rem;
+      padding: 0.2rem;
+      font-weight: bold;
+      width: 80px;
+      height: 30px;
+  
+      &:hover {
+        color: rgb(212, 171, 212);
+        background-color: rgb(199, 32, 199);
+      }
+    }
+  }
+}
