@@ -73,7 +73,7 @@ const HomePages = () => {
       )}
       <Toaster 
         richColors
-        theme="system"
+        theme="dark"
       />
     </>
   );
