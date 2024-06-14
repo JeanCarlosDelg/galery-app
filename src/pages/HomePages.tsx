@@ -1,18 +1,21 @@
 import { useForm } from "react-hook-form";
 import "./styles/HomePages.css";
 import { Toaster, toast } from "sonner";
+// import { secret } from '../Password'
 
 interface Password {
-  password: string;
+  password: string ;
 }
 
 const HomePages = () => {
   const { handleSubmit, reset, register } = useForm<Password>();
 
+  // const password: string = secret.password 
+
   const submit = (data: Password) => {
     console.log(data);
     const toasId = toast.loading("loading...");
-    if (data.password !== "123456") {
+    if (data.password !== '123456') {
       setTimeout(() => {
         toast.error("Contraseña Incorrecta", {
           id: toasId,
