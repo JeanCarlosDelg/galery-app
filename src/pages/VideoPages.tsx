@@ -41,9 +41,11 @@ const VideoPages = () => {
   };
 
   return (
-    <div className="video-pages-container">
+    <div className="container__page-total">
       <div className="pagination-buttons">
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>Previous</button>
+        <button className="btn__prev btn__guie" onClick={handlePrevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
         <div className="btn__mid-container">
           {getPageNumbers().map((number) => (
             <button
@@ -55,14 +57,35 @@ const VideoPages = () => {
             </button>
           ))}
         </div>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
+        <button className="btn__next btn__guie" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
-      <div className="video-gallery">
+      <div className="video__container">
         {currentVideos.map((video) => (
           <div key={video.id} className="video-item">
             <VideosCard video={video} />
           </div>
         ))}
+      </div>
+      <div className="pagination-buttons">
+        <button className="btn__prev btn__guie" onClick={handlePrevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <div className="btn__mid-container">
+          {getPageNumbers().map((number) => (
+            <button
+              key={number}
+              onClick={() => setCurrentPage(number)}
+              className={`btn__mid ${currentPage === number ? "active" : ""}`}
+            >
+              {number}
+            </button>
+          ))}
+        </div>
+        <button className="btn__next btn__guie" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
     </div>
   );

@@ -8,11 +8,6 @@ html {
   font-family: "Aleo", serif;
 }
 
-body {
-  margin: 0;
-  background: linear-gradient(90.21deg, rgba(54, 71, 170, 0.781) -5.91%, rgba(137, 47, 189, 0.842) 111.58%);
-}
-
 h1, h2, h3, h4, p, ul, hr {
   margin-top: 0;
   margin-bottom: 0;

@@ -32,16 +32,19 @@
     gap: 2rem;
 
     .navbar__li {
+      text-align: center;
+      width: 80px;
       margin-bottom: 1.5rem;
 
       .navbar__link {
         font-size: 1.2rem;
         font-weight: bolder;
-        color: rgb(219, 108, 219);
+        color: rgb(233, 104, 233);
         text-decoration: none;
-
+        
         &:hover {
-          color: rgb(155, 23, 155);
+          color: rgb(224, 30, 224);
+          filter: brightness(1.1);
         }
       }
     }
@@ -53,31 +56,5 @@
     font-size: 1.2rem;
     font-weight: bolder;
     text-decoration: underline;
-  }
-}
-
-.active {
-  color: rgb(155, 23, 155);
-}
-
-@media screen and (max-width: 760px) {
-  .navbar__container {
-
-    .navbar__ul {
-
-      .navbar__li {
-
-        .navbar__link {
-
-          &:hover {
-            color: rgb(155, 23, 155);
-          }
-        }
-      }
-    }
-  }
-
-  .active {
-    color: rgb(155, 23, 155);
   }
 }

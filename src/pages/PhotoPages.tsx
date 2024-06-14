@@ -32,9 +32,9 @@ const PhotoPages = () => {
   };
 
   return (
-    <>
+    <div className="container__page-total">
       <div className="pagination-buttons">
-        <button className="btn__prev" onClick={handlePrevPage} disabled={currentPage === 1}>
+        <button className="btn__prev btn__guie" onClick={handlePrevPage} disabled={currentPage === 1}>
           Previous
         </button>
         <div className="btn__mid-container">
@@ -48,7 +48,7 @@ const PhotoPages = () => {
             </button>
           ))}
         </div>
-        <button className="btn__next" onClick={handleNextPage} disabled={currentPage === totalPages}>
+        <button className="btn__next btn__guie" onClick={handleNextPage} disabled={currentPage === totalPages}>
           Next
         </button>
       </div>
@@ -59,7 +59,26 @@ const PhotoPages = () => {
           </div>
         ))}
       </div>
-    </>
+      <div className="pagination-buttons">
+        <button className="btn__prev btn__guie" onClick={handlePrevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <div className="btn__mid-container">
+          {getPageNumbers().map((number) => (
+            <button
+              key={number}
+              onClick={() => setCurrentPage(number)}
+              className={`btn__mid ${currentPage === number ? "active" : ""}`}
+            >
+              {number}
+            </button>
+          ))}
+        </div>
+        <button className="btn__next btn__guie" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
+      </div>
+    </div>
   );
 };
 
